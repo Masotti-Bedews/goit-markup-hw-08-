@@ -1,0 +1,65 @@
+
+.holder {
+    padding-top: 94px;
+    padding-bottom: 94px;
+            .section {
+            color: var(--tittle-text-color);
+            @include font(700, 18px, 2, 0.06em);
+              }
+             .button-portfolio {
+                font-family: inherit;
+                color: var(--tittle-text-color);
+                background-color:var(--secondary-bg-color);
+                border: 0;
+                border-radius: 4px;
+                @include font(500, 16px, 1.62, null);
+                // transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) , 
+                //             color 250ms cubic-bezier(0.4, 0, 0.2, 1) ,
+                //             box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                @include transition (color, background-color, box-shadow, 250ms, cubic-bezier(0.4, 0, 0.2, 1)) ;
+            
+                            &:hover, &:focus {
+                                background-color:var(--accent-color);
+                                color: var(--white-color);
+                            }
+
+            }  
+}
+
+
+.portfolio-text-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 101%;
+    padding: 63px 24px;
+
+    @include font(null, 18px, 1.5, 0.03em);
+    color: var(--white-color);
+    background-color:rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+            .portfolio-link:hover & ,
+            .portfolio-link:focus &{
+            transform: translateY(0%); 
+}
+}
+
+.portfolio-hover-effect {
+     position: relative;
+     overflow: hidden;
+}
+
+.portfolio-link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    &:hover, &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+

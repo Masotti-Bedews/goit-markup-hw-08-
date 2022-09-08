@@ -1,0 +1,13 @@
+.studio {
+    color: var(--logo-dark-color);
+}
+  
+.logo {
+    color:var(--accent-color);
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif; 
+    @include font(700, 26px, 1.19, null);
+        
+         padding-top: 24px;
+         padding-bottom: 24px;
+}

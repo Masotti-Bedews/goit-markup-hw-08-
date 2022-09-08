@@ -1,0 +1,36 @@
+.header{
+    background-color: var(--white-color);
+}
+
+body {
+    background-color: var(--white-color);
+}
+
+.box-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+        .section {
+        margin-bottom: 4px;
+        }
+}
+
+.assortment-box{
+    border: 1px solid var(--border-color);
+    border-top: 0;
+    padding: 20px 24px ;
+    
+}
+
+
+
+
+.under-section {
+    color: var(--general-text-color);
+    @include font(null, 16px, 1.88, 0.06em);
+    font-size: 16px;
+        line-height: 1.88;
+    letter-spacing: 0.06em;
+      
+}

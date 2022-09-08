@@ -1,0 +1,248 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) , visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate( -50%, -50%) scale(0);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+
+    width: 528px;
+    min-height: 581px;
+
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+     border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    padding: 40px;
+}
+
+.modal-field:nth-child(-n+3) {
+    margin-bottom: 10px;
+}
+
+ .area {
+    margin-bottom: 20px;
+}
+
+.check {
+    margin-bottom: 30px;
+}
+
+.modal-tittle {
+    text-align: center;
+    @include font(700, 20px, 1.15, null);
+    color: var(--tittle-text-color);
+    margin-bottom: 12px;
+}
+
+.modal-label {
+    display: block;
+    margin-bottom: 4px;
+
+        @include font(null, 12px, 1.16, 0.01em);
+        color: var(--general-text-color);
+    
+
+}
+
+.modal-input {
+
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+    
+    padding-left: 42px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    outline: none;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus {
+             border-color: var(--accent-color);
+            }
+
+}
+
+
+
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .modal-input:focus + &{
+    fill: var(--accent-color);
+   
+}
+}
+
+.modal-text {
+    width: 100% ;
+    height: 120px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+    outline: none;
+
+    resize: none;
+    padding: 12px 16px ;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+        border-color: var(--accent-color);
+    }
+     &::placeholder {
+        @include font(null, 12px, 1.16, 0.01em);
+        color: rgba(117, 117, 117, 0.5);
+}
+}
+
+
+.check-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include font(null, 14px, 1.7, 0.03em);
+        color: #757575;
+
+       span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            width: 16px ;
+            height: 15px ;
+        
+            border: 2px solid var(--tittle-text-color);
+                border-radius: 2px;
+        
+            margin-right: 8px;
+                    .modal-check:checked + & {
+            background-color: var(--accent-color);
+            border: none;
+            }
+        }
+}
+
+// .modal-check:focus+.check-icon {
+//     border-color: var(--accent-color);
+// }
+
+.modal-check:focus + .span {
+    border: 2px solid var(--accent-color);
+}
+
+
+.check-icon {
+    fill: transparent;
+    
+    .modal-check:checked+.check-text &{
+    fill: var(--white-color);
+}
+
+}
+
+
+.condition {
+    color: var(--accent-color);
+    text-decoration: underline  ;
+        @include font(null, 14px, 1.7, 0.03em);
+
+}
+
+.push {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin: 0 auto;
+    padding: 0;
+    width: 200px;
+    height: 50px;
+
+    padding: 10px 52px ;
+
+    background: #2196F3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: none;
+
+        @include font(700, 16px, 1.87, 0.06em);
+             align-items: center;
+             color: var(--white-color);
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover ,&:focus {
+    background-color: var(--secondary-button-colar);
+}
+   
+}
+
+
+
+.modal-close {
+    position: absolute;
+      top: 8px;
+      right: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);   
+    background-color: var(--white-color);
+    border-radius: 50%;
+
+      display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn__icon {
+fill: currentColor;
+}
+
+.modal-close:hover ,
+.modal-close:focus {
+ color:var(--accent-color);
+}

@@ -1,0 +1,46 @@
+
+
+.section-special {
+    padding-bottom: 94px;
+        .list {
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+            gap: 30px; 
+            }
+        }
+}
+
+.section-special {
+    @media screen and (max-width: 1200px ) {
+           display: none; 
+    }
+ 
+}
+
+.speciality-item {
+    position: relative;
+
+}
+ 
+.speciality-name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+    // padding-top: 27px;
+    // padding-bottom: 27px;
+
+    @include font(700, 14px, 1.14, null);
+    
+     text-transform: uppercase;
+    color: var(--white-color);
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70;
+    
+}
