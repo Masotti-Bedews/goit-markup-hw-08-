@@ -11,7 +11,8 @@
 
 
 .features {
-    // display: flex;
+    display: flex;
+    flex-wrap: wrap;
 
         .section-tittle {
             margin-bottom: 10px;
@@ -29,7 +30,7 @@
 // }
 
 .icon-bg {
-    width: 450px;
+    width: 100%;
         height: 120px;
 
     background: #F5F4FA;

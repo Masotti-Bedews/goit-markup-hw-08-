@@ -83,6 +83,7 @@ a {
 }
 
 .container {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-left: auto;
@@ -409,6 +410,10 @@ a {
   padding-bottom: 94px;
 }
 
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
 .features .section-tittle {
   margin-bottom: 10px;
 }
@@ -419,7 +424,7 @@ a {
 }
 
 .icon-bg {
-  width: 450px;
+  width: 100%;
   height: 120px;
   background: #F5F4FA;
   border-radius: 4px;
@@ -487,7 +492,6 @@ a {
   padding-bottom: 94px;
 }
 .team .member {
-  display: flex;
   column-gap: 30px;
 }
 .team .team-profession {
