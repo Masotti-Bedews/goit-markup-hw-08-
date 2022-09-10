@@ -22,7 +22,11 @@
 
 .custom-tittle {
     @include font(700, 36px, 1.16, null);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
     text-align: center;
     color: var(--tittle-text-color);
 }

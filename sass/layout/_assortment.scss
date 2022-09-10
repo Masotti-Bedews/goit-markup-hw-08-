@@ -10,13 +10,43 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    
+
         .section {
         margin-bottom: 4px;
         }
 }
 
+.box-list .list {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+        } 
+
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 60px) / 3);
+            } 
+
+}
+
+.portfolio-link {
+  
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    &:hover, &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
 .assortment-box{
+    flex-grow: 1;
+
+
     border: 1px solid var(--border-color);
     border-top: 0;
     padding: 20px 24px ;
